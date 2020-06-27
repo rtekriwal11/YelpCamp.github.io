@@ -239,6 +239,10 @@ app.use("/", indexRoutes);
 app.use("/campground", campgroundRoutes);
 app.use("/campground/:id/comments", commentRoutes);
 
-app.listen("3000",function(){
-	console.log("Server fr Yelp camp is starrted");
-});
+// app.listen("3000",function(){
+// 	console.log("Server fr Yelp camp is starrted");
+// });
+var port = process.env.PORT || 3000;
+    app.listen(port, function () {
+      console.log("Server Has Started!");
+    });
